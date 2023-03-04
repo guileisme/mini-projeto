@@ -15,6 +15,8 @@ public class App {
 
 
         Scanner input = new Scanner(System.in);
+
+        
         Personagem2.Stamina(-50);
         System.out.println("Há um corpo no chão da biblioteca, múltiplos golpes de faca e um tiro no peito... \nA casa está cheia de sangue e há vestígios de uma luta entre duas pessoas. A janela está quebrada e parece que foi aqui que tudo terminou, pois o sangue está fresco e há pegadas mostrando a direção do suposto assassino.");
         System.out.println("Esse crime não parece ser diferente dos outros, um assassino e uma vítima. Já investiguei milhares de casos assim, desde que cheguei na cidade. Mas tem algo aqui que faz tudo ser diferente de um assassinato comum... \nO homem no chão é o meu parceiro.");
