@@ -49,7 +49,7 @@ public class capitulo {
         else if (escolha == 2) {
             return escolha = 2;
         }
-
+        
         return escolha;
     }
 
