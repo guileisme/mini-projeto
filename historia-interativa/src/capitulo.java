@@ -8,6 +8,21 @@ public class capitulo {
     character personagem;
     int custoEnergia;
 
+    capitulo(String nome, 
+            String texto, 
+            String escolha1, 
+            String escolha2, 
+            character personagem,
+            int custoEnergia ){
+                this.nome = nome;
+                this.texto = texto;
+                this.escolha1 = escolha1;
+                this.escolha1 = escolha2;
+                this.personagem = personagem;
+                this.custoEnergia = custoEnergia;
+                
+            }
+
     public void mostrar() {
         System.out.println(this.nome);
         System.out.print(escolha1);
@@ -26,7 +41,7 @@ public class capitulo {
             return escolha = input.nextInt();
             
         } 
-        
+
         if (escolha == 1) {
             return escolha = 1;
         }
