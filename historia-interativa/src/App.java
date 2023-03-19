@@ -145,24 +145,6 @@ public class App {
                 chapter5.mostrar();
                 
             }
-            
-            /*if (chapter1.escolher() == 1)
-            {
-                chapter2.mostrar();
-            };
-            if (chapter1.escolher() == 2)
-        {
-            chapter3.mostrar();
-            chapter3.escolher();
-            if (chapter3.escolher() == 1){
-                chapter4.mostrar();
-            }
-
-            else if (chapter3.escolher() == 2){
-                chapter5.mostrar();
-
-            }
-        };*/
 
     input.close();
 
