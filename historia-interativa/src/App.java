@@ -1,20 +1,26 @@
+//IMPORTANDO BIBLIOTECAS
 import java.util.Scanner;
+import javax.naming.InitialContext;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
 
-        character Personagem1 = new character(
+        //CRIAÇÃO DOS PERSONAGENS
+        character character1 = new character(
             "Montenegro",
             "Detetive",
             100
         );
-        character Personagem2 = new character(
+        character character2 = new character(
             "Robert",
             "Detetive",
             50
         );
 
+
+        //CRIAÇÃO DOS CAPÍTULOS
         chapter chapter1 = new chapter
         (
             "A cena do Crime",
@@ -23,16 +29,11 @@ public class App {
             "está quebrada e parece que foi aqui que tudo terminou, pois o sangue está fresco e há" + 
             "pegadas mostrando a direção do suposto assassino.\nEsse crime não parece ser diferente"+ 
             "dos outros, um assassino e uma vítima. Já investiguei milhares de casos assim, desde"  +
-            "que cheguei na cidade. Mastem algo aqui que faz tudo ser diferente de um assassinato"  +
+            "que cheguei na cidade. Mas tem algo aqui que faz tudo ser diferente de um assassinato" +
             "comum... \nO homem no chão é o meu parceiro.\nÉramos próximos o suficiente para tornar"+ 
-            "esse caso extremamente pessoal para mim.",
-            Personagem2,
-            50,
-            new String[]
-            {
-            "1) Seguir o rastro de sangue pela janela.",
-            "2) Investigar a biblioteca.",
-            } 
+            "\nesse caso extremamente pessoal para mim.",
+            character2,
+            50
         );
 
         chapter chapter2 = new chapter
@@ -45,9 +46,8 @@ public class App {
             "meu peito e olho o rosto de quem que fez o mesmo com o meu parceiro.\nCurioso"     +
             "saber que estou morrendo pelas mãos da mesma que pretendia matar, para vingar"     +
             "a morte de meu amigo...\n A vida é mesmo uma grande piada de mau gosto...",
-            Personagem1,
-            100,
-            null
+            character1,
+            100
         );
 
         chapter chapter3 = new chapter
@@ -59,13 +59,8 @@ public class App {
             "que você pague por isso. Assim como ela, você também não vai poder se defender"        + 
             "das acusações...\nParece que isso foi o estopim para a briga e o remetente"            +
             "estava esperando para fazer a sua emboscada. O que eu devo fazer...? ",
-            Personagem1,
-            0,
-            new String[]
-            {
-                "1) Descobrir o passado do seu parceiro.",
-                "2) Queimar a carta e ir embora.",
-            }
+            character1,
+            0
         );
 
         chapter chapter4 = new chapter(
@@ -93,60 +88,32 @@ public class App {
             "prendê-la, pois sabia que a sua ação tinha sido uma forma de acertar as contas com"    +
             "o seu pai.\nEla caiu no chão da sala, chorando e balbuciando palavras que não tive a"  +
             "mínima intenção de ouvir. \nMais um caso encerrado...",
-            Personagem1,
-            79,
-            null
+            character1,
+            79
         );
 
         chapter chapter5 = new chapter(
             "Não é da minha conta",
             "Seja quem for Lyla, parece que Robert não fez algo honrável com ela..."                +
             "\nNão quero me meter em uma história que não me pertence.",
-            Personagem2,
-            0,
-            null
+            character2,
+            0
         );
         
-        /* choices escolha1_1 = new choices(
-            "1) Seguir o rastro de sangue pela janela.",
-            chapter2
-        );
+        //ADICIONANDO AS ESCOLHAS
 
-        choices escolha1_2 = new choices(
-            "2) Investigar a biblioteca.", 
-            chapter3
-        );
-
-        choices escolha3_1 = new choices(
-            "1) Descobrir o passado do seu parceiro.", 
-            chapter4
-        );
-
-        choices escolha3_2 = new choices(
-            "2) Queimar a carta e ir embora.", 
-            chapter5
-        ); */
-
-        chapter1.mostrar();
-
+        chapter1.chapterChoices.add(new choices("1) Seguir o rastro de sangue pela janela.", chapter2));
+        chapter1.chapterChoices.add(new choices("2) Investigar a biblioteca.", chapter2));
+        chapter3.chapterChoices.add(new choices("1) Descobrir o passado do seu parceiro.", chapter4));
+        chapter3.chapterChoices.add(new choices("2) Queimar a carta e ir embora.", chapter5));
         
-        if (chapter1.escolher() == 1) {
-            chapter2.mostrar();
-            
-        } 
-        
-        else {
-            chapter3.mostrar();
-            if (chapter3.escolher() == 1){
-                chapter4.mostrar();
-            } 
-            
-            else {
-                chapter5.mostrar();
-                
-            }
+        //COMEÇANDO O PROGRAMA
+
+        chapter initialChapter = chapter1;
+
+        initialChapter.execute();
 
     input.close();
 
     }
-}}  
+}  
