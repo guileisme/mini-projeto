@@ -1,18 +1,16 @@
 public class choices {
-    String texto;
-    chapter proximo;
+    String text; //TEXTO DA ESCOLHA
+    chapter next; //CAPÍTULO RELACIONADO À ESCOLHA
 
-    choices(
-        String texto,
-        chapter proximo
-    ){
-        this.texto = texto;
-        this.proximo = proximo;
-    }
-
-    public static void mostrarEscolhas(chapter raiz)
+    choices
+    (
+        String text,
+        chapter next
+    )
+    
     {
-        chapter atual = raiz;
-
+        this.text = text;
+        this.next = next;
     }
+
 }
