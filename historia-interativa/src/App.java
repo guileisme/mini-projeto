@@ -23,14 +23,14 @@ public class App {
         //CRIAÇÃO DOS CAPÍTULOS
         chapter chapter1 = new chapter
         (
-            "A cena do Crime",
+            "Capítulo 1 - A cena do Crime",
             "Há um corpo no chão da biblioteca, múltiplos golpes de faca e um tiro no peito..."     + 
-            "\nA casa está cheia de sangue e há vestígios de uma luta entre duas pessoas. A janela" +
-            "está quebrada e parece que foi aqui que tudo terminou, pois o sangue está fresco e há" + 
-            "pegadas mostrando a direção do suposto assassino.\nEsse crime não parece ser diferente"+ 
-            "dos outros, um assassino e uma vítima. Já investiguei milhares de casos assim, desde"  +
+            "\nA casa está cheia de sangue e há vestígios de uma luta entre duas pessoas. A janela " +
+            "está quebrada e parece que foi aqui que tudo terminou, pois o sangue está fresco e há " + 
+            "pegadas mostrando a direção do suposto assassino.\nEsse crime não parece ser diferente "+ 
+            "dos outros, um assassino e uma vítima. Já investiguei milhares de casos assim, desde "  +
             "que cheguei na cidade. Mas tem algo aqui que faz tudo ser diferente de um assassinato" +
-            "comum... \nO homem no chão é o meu parceiro.\nÉramos próximos o suficiente para tornar"+ 
+            " comum... \nO homem no chão é o meu parceiro.\nÉramos próximos o suficiente para tornar"+ 
             "\nesse caso extremamente pessoal para mim.",
             character2,
             50
@@ -38,13 +38,13 @@ public class App {
 
         chapter chapter2 = new chapter
         (
-            "Um Encontro Inesperado",
+            "Capítulo 2 - Um Encontro Inesperado",
             "Vejo que o rastro vai até o beco ao lado e sigo até chegar em uma lata de lixo."   +
-            "\nLá está a arma do crime, revólver taurus calibre .22, a arma que o meu"          + 
-            "parceiro costumava usar em casos mais sérios...\nMeu palpite é que-\n -Não"        + 
-            "devia ter se metido onde não foi chamado... \n BANG!\n Sinto a bala perfurando"    +
-            "meu peito e olho o rosto de quem que fez o mesmo com o meu parceiro.\nCurioso"     +
-            "saber que estou morrendo pelas mãos da mesma que pretendia matar, para vingar"     +
+            "\nLá está a arma do crime, revólver taurus calibre .22, a arma que o meu "          + 
+            "parceiro costumava usar em casos mais sérios...\nMeu palpite é que-\n -Não "        + 
+            "devia ter se metido onde não foi chamado... \n BANG!\n Sinto a bala perfurando "    +
+            "meu peito e olho o rosto de quem que fez o mesmo com o meu parceiro.\nCurioso "     +
+            "saber que estou morrendo pelas mãos da mesma que pretendia matar, para vingar "     +
             "a morte de meu amigo...\n A vida é mesmo uma grande piada de mau gosto...",
             character1,
             100
@@ -52,19 +52,19 @@ public class App {
 
         chapter chapter3 = new chapter
         (
-            "Alguém do Passado",
+            "Capítulo 3 - Alguém do Passado",
             "No local do crime, vejo que há um livro jogado no chão, junto de um papel"             +
             "recortado que deixa uma mensagem\n Você não vai escapar dos seus pecados..."           + 
-            "Eu sei o que você fez com Lyla e logo todos saberão também.\nMas não antes"            +
-            "que você pague por isso. Assim como ela, você também não vai poder se defender"        + 
-            "das acusações...\nParece que isso foi o estopim para a briga e o remetente"            +
+            "Eu sei o que você fez com Lyla e logo todos saberão também.\nMas não antes "            +
+            "que você pague por isso. Assim como ela, você também não vai poder se defender "        + 
+            "das acusações...\nParece que isso foi o estopim para a briga e o remetente "            +
             "estava esperando para fazer a sua emboscada. O que eu devo fazer...? ",
             character1,
             0
         );
 
         chapter chapter4 = new chapter(
-            "Raízes Profundas",
+            "Capítulo 4 - Raízes Profundas",
             "Guardei aquele papel em meu casaco e decidi investigar o passado inexplorado"          + 
             "do meu parceiro. Não tinha nada sobre ele nos arquivos da delegacia, então tive"       + 
             "que ir atrás de pessoas que podiam me ajudar.\nPrimeiro, fui atrás de sua ex-esposa"   + 
@@ -93,7 +93,7 @@ public class App {
         );
 
         chapter chapter5 = new chapter(
-            "Não é da minha conta",
+            "Capítulo 5 - Não é da minha conta",
             "Seja quem for Lyla, parece que Robert não fez algo honrável com ela..."                +
             "\nNão quero me meter em uma história que não me pertence.",
             character2,
@@ -103,7 +103,7 @@ public class App {
         //ADICIONANDO AS ESCOLHAS
 
         chapter1.chapterChoices.add(new choices("1) Seguir o rastro de sangue pela janela.", chapter2));
-        chapter1.chapterChoices.add(new choices("2) Investigar a biblioteca.", chapter2));
+        chapter1.chapterChoices.add(new choices("2) Investigar a biblioteca.", chapter3));
         chapter3.chapterChoices.add(new choices("1) Descobrir o passado do seu parceiro.", chapter4));
         chapter3.chapterChoices.add(new choices("2) Queimar a carta e ir embora.", chapter5));
         
