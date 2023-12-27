@@ -1,23 +1,16 @@
 //IMPORTANDO BIBLIOTECAS
 import java.util.Scanner;
-import javax.naming.InitialContext;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
+        reader reader = new reader();
+        HashMap<String, character> characters = reader.readCharacters("resources/characters.txt");
 
         //CRIAÇÃO DOS PERSONAGENS
-        character character1 = new character(
-            "Montenegro",
-            "Detetive",
-            100
-        );
-        character character2 = new character(
-            "Robert",
-            "Detetive",
-            50
-        );
+        character character1 = characters.get("Guilherme Montenegro");
+        character character2 = characters.get("Robert Delay");
 
 
         //CRIAÇÃO DOS CAPÍTULOS

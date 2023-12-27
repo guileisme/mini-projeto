@@ -1,0 +1,15 @@
+CHARACTER
+NAME
+Guilherme Montenegro
+STAMINA
+100
+CLASS
+Detetive
+
+CHARACTER
+NAME
+Robert Delay
+STAMINA
+50
+CLASS
+Detetive
